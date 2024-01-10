@@ -1,0 +1,44 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 400px;
+}
+    body {
+    background-color: lightblue;
+    }
+        #top {
+    text-align: center;
+        }
+    .btn{
+    background-color: white;
+    color: blue;
+    font-weight: 400;
+    margin: 20px;
+    padding: 20px;
+    border: double black;
+    }
+
+    .div-1, .div-2, .div-3, .div-4 {
+        background-color: white;
+        width: fit-content;
+        padding:5px;
+        margin: 10px;
+    }
+    .btn1{
+        background-color: lightgreen;
+    }
+    .btn2{
+        background-color: gold;
+    }
+    .btn3{
+        background-color: lightpink;
+    }
+    .btn4{
+        background-color: lightcoral;
+    }
+    input[type=button] {
+        padding: 10px;
+        border-color: blue;
+        margin-top: 10px;
+    }
