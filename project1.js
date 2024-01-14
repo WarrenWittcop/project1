@@ -9,40 +9,40 @@ function startGame() {
     playing = true;
   }
   
-// 1 make question and answer bank--array so i can change quuestions if needed
+// 1 make question and answer bank--array so i can change questions if needed
 
 //let quest_hist = [1,2,3,4,5]
 //let histtext = [] 
 
 // 2 make function to randomly show question 
 
-function getQuestionhist() {
-    let = quest_hists = ["Who is the president?", "Why is the president?", "What is the president?"];
-    let quest_hist = quest_hists[Math.floor(Math.random() * quest_hists.length)];
-    document.getElementById("showQuestionHist").textContent = "Your new question is " + quest_hist;
-};
+// function getQuestionhist() {
+//     let = quest_hists = ["Who is the president?", "Why is the president?", "What is the president?"];
+//     let quest_hist = quest_hists[Math.floor(Math.random() * quest_hists.length)];
+//     document.getElementById("showQuestionHist").textContent = "Your new question is " + quest_hist;
+// };
 
-function getQuestionMon() {
-    let = quest_mons = ["What currency does America use?", "How many pennies in 17 dollars?", "What is the president on the $50.00?"];
-    let quest_mon = quest_mons[Math.floor(Math.random() * quest_mons.length)];
-    document.getElementById("showQuestionMon").textContent = "Your new question is " + quest_mon;
-};
+// function getQuestionMon() {
+//     let = quest_mons = ["What currency does America use?", "How many pennies in 17 dollars?", "What is the president on the $50.00?"];
+//     let quest_mon = quest_mons[Math.floor(Math.random() * quest_mons.length)];
+//     document.getElementById("showQuestionMon").textContent = "Your new question is " + quest_mon;
+// };
 
-function getQuestionMusic() {
-    let = quest_musics = ["Who wrote Livin on a Prayer?", "What is the longest note?"];
-    let quest_music = quest_musics[Math.floor(Math.random() * quest_musics.length)];
-    document.getElementById("showQuestionMusic").textContent = "Your new question is " + quest_music;
-};
+// function getQuestionMusic() {
+//     let = quest_musics = ["Who wrote Livin on a Prayer?", "What is the longest note?"];
+//     let quest_music = quest_musics[Math.floor(Math.random() * quest_musics.length)];
+//     document.getElementById("showQuestionMusic").textContent = "Your new question is " + quest_music;
+// };
 
-function getQuestionMovie() {
-    let = quest_movs = ["What movie did Spielberg direct?", "Who starred in King Kong?"];
-    let quest_mov = quest_movs[Math.floor(Math.random() * quest_movs.length)];
-    document.getElementById("showQuestionMov").textContent = "Your new question is " + quest_mov;
-};
+// function getQuestionMovie() {
+//     let = quest_movs = ["What movie did Spielberg direct?", "Who starred in King Kong?"];
+//     let quest_mov = quest_movs[Math.floor(Math.random() * quest_movs.length)];
+//     document.getElementById("showQuestionMov").textContent = "Your new question is " + quest_mov;
+// };
 
-// 3 include function read to compare answer-- make sure to include lowercasing for reading the input so no answer errors --- toLowercase
+// 3 include function read to compare answer-- 
 
-// 4 make input boxes in html for answer or possibly multiple choice
+// 4 make input boxes  multiple choice
 
 // 5 make game over function after 3 wrong guesses
 
@@ -82,6 +82,21 @@ function startTimer() {
 function timeupdt() {
     //make funcction that updates countdown time in html
 }
-
-
 */
+var timeLeft = 10;
+var elem = document.getElementById('Timer');
+
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+  if (timeLeft == 0) {
+    clearTimeout(timerId);
+    console.log("Time's up!")
+  } else {
+    elem.innerHTML = timeLeft + ' seconds remaining';
+    timeLeft--;
+  }
+}
+
+//css visibilty property--hide other question
+

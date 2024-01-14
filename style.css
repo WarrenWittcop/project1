@@ -4,41 +4,46 @@ html {
     box-sizing: border-box;
     min-width: 400px;
 }
-    body {
+body {
     background-color: lightblue;
-    }
-        #top {
-    text-align: center;
-        }
-    .btn{
-    background-color: white;
+}
+.game{
+    background: white;
+    width: 90%;
+    max-width: 1700px;
+    margin: 50px;
+    border-radius: 10px;
+}
+.game h1{
+    border: 2px dashed lightseagreen;
+    background-color: seagreen;
+}
+.Trivia{
+    padding:20px 0;
+}     
+.game h2{
+    font-size: 20px;
+}
+.btn{
+    background-color: blue;
+    border: solid gray;
+    color: silver;
+    width: 40%;
+    padding:10px;
+    margin: 20px auto 0;  
+}
+.btn:hover{
+    background-color: black;
+}
+#next-btn{
+    background-color: limegreen;
     color: blue;
-    font-weight: 400;
-    margin: 20px;
-    padding: 20px;
-    border: double black;
-    }
-
-    .div-1, .div-2, .div-3, .div-4 {
-        background-color: white;
-        width: fit-content;
-        padding:5px;
-        margin: 10px;
-    }
-    .btn1{
-        background-color: lightgreen;
-    }
-    .btn2{
-        background-color: gold;
-    }
-    .btn3{
-        background-color: lightpink;
-    }
-    .btn4{
-        background-color: lightcoral;
-    }
-    input[type=button] {
-        padding: 10px;
-        border-color: blue;
-        margin-top: 10px;
-    }
+    width: 10%;
+    padding: 5px;
+    margin: 5px auto 0;
+    border: solid gray;
+    display: block;
+}
+#next-btn:hover{
+    background-color: black;
+}
