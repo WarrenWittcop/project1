@@ -1,13 +1,9 @@
-//trivia needs
+// //trivia needs
 
-let playing = false;
+// let playing = false;
 
-let startbtn;
+// let startbtn;
 
-function startGame() {
-    startButton.destroy();
-    playing = true;
-  }
   
 // 1 make question and answer bank--array so i can change questions if needed
 
@@ -56,8 +52,8 @@ function gameOver() {
 
 // 6 make score count how many are right
 
-let points = 0
-let strikes = 0
+
+
 if (input = questanswer) { points++; // might have to change to arrow
     alert("Correct! You have " + points);
 } else { strikes++;
@@ -83,20 +79,91 @@ function timeupdt() {
     //make funcction that updates countdown time in html
 }
 */
-var timeLeft = 10;
-var elem = document.getElementById('Timer');
+// var timeLeft = 10;
+// var elem = document.getElementById('Timer');
 
-var timerId = setInterval(countdown, 1000);
+// var timerId = setInterval(countdown, 1000);
 
-function countdown() {
-  if (timeLeft == 0) {
-    clearTimeout(timerId);
-    console.log("Time's up!")
-  } else {
-    elem.innerHTML = timeLeft + ' seconds remaining';
-    timeLeft--;
-  }
-}
+// function countdown() {
+//   if (timeLeft == 0) {
+//     clearTimeout(timerId);
+//     console.log("Time's up!")
+//   } else {
+//     elem.innerHTML = timeLeft + ' seconds remaining';
+//     timeLeft--;
+//   }
+// }
 
 //css visibilty property--hide other question
 
+const questions = [
+    {
+        question: "What food is stolen the most in the world?",
+        answers: [
+            { text: "cheese", correct: true},
+            { text: "chocolate", correct: false},
+            { text: "fresh meat", correct: false},
+            { text: "baby carrots", correct: false},
+        ]
+    },
+    {
+        question: "In what state is it legal to hunt unicorns?",
+        answers: [
+            {text: "California", correct: false},
+            {text: "Florida", correct: false},
+            {text: "Michigan", correct: true},
+            {text: "Texas", correct: false}, 
+        ]    
+    },
+];
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0
+let points = 0
+// let strikes = 0
+
+
+function startGame(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next"
+    showQuestion();
+  }
+
+  function showQuestion(){
+    resetQuestion();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". Your question is: " + currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", chooseAnswer);
+    });
+    
+  }
+  function resetQuestion(){
+    nextButton.style.display = "none"
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+  }
+function chooseAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+    }else {
+        selectedBtn.classList.add("incorrect")
+    }
+}
+
+  startGame();

@@ -6,31 +6,25 @@
     <title>Warren's Trivia Game!</title>
     <link rel="stylesheet" href="style.css">
     <script src="project1.js" defer></script>
-    <h2 id = 'top'>Press the button below to begin</h2>
+
 </head>
 <body>
     <div class="game">
-        <h1 id = 'top'>Welcome to trivia night!!</h1>
+        <h1>Welcome to trivia night!!</h1>
         <div class="Trivia">
-           <h2 id="showQuestionHist">Questions</h2>
-               <div>
-        <button class="btn">A</button>
-        <button class="btn">B</button>
-        <button class="btn">C</button>
-        <button class="btn">D</button>
-
-    </div> 
-    <div>
-    <button id="next-btn">Next</button>
+           <h2 id="question">Questions</h2>
+            <div id="answer-buttons">
+        <button class="btn">A.</button>
+        <button class="btn">B.</button>
+        <button class="btn">C.</button>
+        <button class="btn">D.</button>
+        </div> 
+        <button id="next-btn">Next</button>
     </div>
-    
-    <h4>Click below to see what you get!</h4>
-    <input type="button" class ="btn1" value="History " onclick="getQuestionhist();" />
-    <div class ="div-1" id="showQuestionHist"></div>
- 
+</div>    
 
-    <div id="Timer"></div>
-    <div><button id="New Game">New Game</button></div>
+    <!-- <div id="Timer"></div> -->
+ 
 
 </body>
 </html>

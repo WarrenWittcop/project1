@@ -51,3 +51,11 @@
     // <button id="startbtn">Start Game</button> 
     // <h4>Click below to see what you get!</h4>    <button id="startbtn">Start Game</button> 
     // <h4>Click below to see what you get!</h4>
+
+    // <h4>Click below to see what you get!</h4>
+    // <input type="button" class ="btn1" value="History " onclick="getQuestionhist();" />
+    // <div class ="div-1" id="showQuestionHist"></div>
+
+    // <div><button id="New Game">New Game</button></div>
+
+    // <h2>Press the button below to begin</h2>
