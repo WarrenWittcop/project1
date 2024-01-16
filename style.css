@@ -7,21 +7,27 @@ html {
 body {
     background-color: lightblue;
 }
-.game{
+h3 {
+    font-size: large;
+    font-weight: 500;
+    color: red;
+    text-align: center;
+}
+.game {
     background: white;
     width: 90%;
     max-width: 1700px;
     margin: 50px;
     border-radius: 10px;
 }
-.game h1{
+.game h1 {
     border: 2px dashed lightseagreen;
     background-color: seagreen;
 }
-.Trivia{
+.Trivia {
     padding:20px 0;
 }     
-.game h2{
+.game h2 {
     font-size: 20px;
 }
 .btn{
@@ -52,4 +58,8 @@ body {
 }
 .incorrect{
     background: red;
+}
+#Timer {
+    font-size: 50px;
+    text-align: center;
 }

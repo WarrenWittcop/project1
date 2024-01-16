@@ -1,14 +1,6 @@
-// //trivia needs
 
-// let playing = false;
 
-// let startbtn;
 
-  
-// 1 make question and answer bank--array so i can change questions if needed
-
-//let quest_hist = [1,2,3,4,5]
-//let histtext = [] 
 
 // 2 make function to randomly show question 
 
@@ -36,34 +28,6 @@
 //     document.getElementById("showQuestionMov").textContent = "Your new question is " + quest_mov;
 // };
 
-// 3 include function read to compare answer-- 
-
-// 4 make input boxes  multiple choice
-
-// 5 make game over function after 3 wrong guesses
-
-/*if (strikes >= 3) {
-    gameOver();
-}
-function gameOver() {
-    alert("Game Over! Feel free to try again.")
-    //hide or disable question buttons and timer, leave new game button active 
-}
-
-// 6 make score count how many are right
-
-
-
-if (input = questanswer) { points++; // might have to change to arrow
-    alert("Correct! You have " + points);
-} else { strikes++;
-    alert("Good try. A strike on the board." + strikes);
-    checkanswer();
-} //need to make sure this is calling the check answer function
-
-// make button to play again after answering all questions or gameover 
-//maybe use this to call the stargame function again
-
 // make sure css has it displayed nicely , background should be light colored so we can see the text
 
 // align items in grid for easy reading and spacing
@@ -72,13 +36,13 @@ if (input = questanswer) { points++; // might have to change to arrow
 
 // make a timer function 10 seconds? --
 
-function startTimer() {
-    countdown 1000 // 10 seconds
-} //  set interval? innerhtml
-function timeupdt() {
-    //make funcction that updates countdown time in html
-}
-*/
+// function startTimer() {
+//     countdown 1000 // 10 seconds
+// } //  set interval? innerhtml
+// function timeupdt() {
+//     //make funcction that updates countdown time in html
+// }
+// */
 // var timeLeft = 10;
 // var elem = document.getElementById('Timer');
 
@@ -95,6 +59,22 @@ function timeupdt() {
 // }
 
 //css visibilty property--hide other question
+
+var timeLeft = 10;
+var elem = document.getElementById('Timer');
+
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+  if (timeLeft == 0) {
+    clearTimeout(timerId);
+    useNextButton();
+    strikes++;
+  } else {
+    elem.innerHTML = timeLeft + ' seconds remaining';
+    timeLeft--;
+  }
+}
 
 const questions = [
     {
@@ -114,7 +94,23 @@ const questions = [
             {text: "Michigan", correct: true},
             {text: "Texas", correct: false}, 
         ]    
-    },
+    },    {
+        question: "What is the Cookie Monster's real name?",
+        answers: [
+            { text: "George", correct: false},
+            { text: "Mikey", correct: false},
+            { text: "Jose", correct: false},
+            { text: "Sid", correct: true},
+        ]
+    },    {
+        question: "How old is the oldest wooden wheel?",
+        answers: [
+            { text: "1000 years", correct: false},
+            { text: "5000 years", correct: true},
+            { text: "3000 years", correct: false},
+            { text: "400 years", correct: false},
+        ]
+    }
 ];
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -122,12 +118,14 @@ const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0
 let points = 0
-// let strikes = 0
+let strikes = 0
 
 
 function startGame(){
     currentQuestionIndex = 0;
-    score = 0;
+    points = 0;
+    strikes = 0;
+    timeLeft = 10;
     nextButton.innerHTML = "Next"
     showQuestion();
   }
@@ -148,7 +146,7 @@ function startGame(){
         }
         button.addEventListener("click", chooseAnswer);
     });
-    
+
   }
   function resetQuestion(){
     nextButton.style.display = "none"
@@ -161,9 +159,42 @@ function chooseAnswer(e){
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
         selectedBtn.classList.add("correct");
+        points++;
     }else {
-        selectedBtn.classList.add("incorrect")
+        selectedBtn.classList.add("incorrect");
+        strikes++;
+    }
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
+}
+
+function showPoints(){
+    resetQuestion();
+    questionElement.innerHTML = `You have ${points} total correct and ${strikes} total incorrect`;
+    nextButton.innerHTML = "Start New Game";
+    nextButton.style.display = "block";
+}
+
+function useNextButton(){
+    currentQuestionIndex++;
+    timeLeft = 10;
+    if(currentQuestionIndex < questions.length && strikes < 3){
+        showQuestion();
+    }else{
+        showPoints();
     }
 }
 
+nextButton.addEventListener("click", ()=> {
+    if(currentQuestionIndex < questions.length){
+        useNextButton();
+    }else{
+        startGame();
+    }
+})
   startGame();
