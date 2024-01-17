@@ -25,18 +25,24 @@ h3 {
     background-color: seagreen;
 }
 .Trivia {
-    padding:20px 0;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }     
 .game h2 {
     font-size: 20px;
 }
+
 .btn{
     background-color: blue;
     border: solid gray;
     color: silver;
     width: 40%;
+    min-width: 100px;
     padding:10px;
-    margin: 20px auto 0;  
+    margin: 20px;  
 }
 .btn:hover{
     background-color: black;

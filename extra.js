@@ -1,3 +1,5 @@
+// this is scratch file for saving old code 
+
 /*<input type="button" class ="btn2" value="Money Questions" onclick="getQuestionMon();" />
 <div class ="div-2" id="showQuestionMon"></div>
 <input type="button" class ="btn3" value="Music Questions" onclick="getQuestionMusic();" />
@@ -157,3 +159,27 @@
             { text: "baby carrots", correct: false},
         ]
     },
+
+
+    // function getQuestionhist() {
+//     let = quest_hists = ["Who is the president?", "Why is the president?", "What is the president?"]; array of questions nested answers 
+//     let quest_hist = quest_hists[Math.floor(Math.random() * quest_hists.length)];
+//     document.getElementById("showQuestionHist").textContent = "Your new question is " + quest_hist;
+// };
+
+// function getQuestionMon() {
+//     let = quest_mons = ["What currency does America use?", "How many pennies in 17 dollars?", "What is the president on the $50.00?"];
+//     let quest_mon = quest_mons[Math.floor(Math.random() * quest_mons.length)];
+//     document.getElementById("showQuestionMon").textContent = "Your new question is " + quest_mon;
+// };
+
+// function getQuestionMusic() {
+//     let = quest_musics = ["Who wrote Livin on a Prayer?", "What is the longest note?"];
+//     let quest_music = quest_musics[Math.floor(Math.random() * quest_musics.length)];
+//     document.getElementById("showQuestionMusic").textContent = "Your new question is " + quest_music;
+// };
+
+// function getQuestionMovie() {
+//     let = quest_movs = ["What movie did Spielberg direct?", "Who starred in King Kong?"];
+//     let quest_mov = quest_movs[Math.floor(Math.random() * quest_movs.length)];
+//     document.getElementById("showQuestionMov").textContent = "Your new question is " + quest_mov;
