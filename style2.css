@@ -1,0 +1,28 @@
+.game {
+    background: white;
+    width: 90%;
+    max-width: 1700px;
+    margin: 50px;
+    border-radius: 10px;
+}
+body {
+    background-color: lightblue;
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    font-size: large;
+    font-weight: 500;
+    color: red;
+    text-align: center;
+}
+.start-text {
+    text-align: center;
+    font-size: 30px;
+    border: solid black;
+    background-color: silver;
+}
+.try{
+    color: indigo
+}
