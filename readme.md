@@ -5,9 +5,9 @@ This trivia game is a simple multiple choice question format for anyone who want
 
 ## Screenshots
 
-https://i.imgur.com/X4tgUfW.png
+![Alt text](https://i.imgur.com/X4tgUfW.png "screen-1")
 
-https://i.imgur.com/aMtkpRI.png
+![Alt text](https://i.imgur.com/aMtkpRI.png "screen-2")
 
 ## Tech Used
 
@@ -43,7 +43,7 @@ https://github.com/WarrenWittcop/
 I did have some help making this readme and question bank.
 
 For my questions a combination of:
-1.  https://www.rd.com/list/interesting-facts/
+1. https://www.rd.com/list/interesting-facts/
 2. https://www.sciencefocus.com/science/fun-facts
 3. https://newsfeed.time.com/2011/10/21/cheese-is-the-most-stolen-food-on-earth/
 
