@@ -21,9 +21,10 @@ Located at https://github.com/WarrenWittcop/project1
 1. Clone the files down
 
 2. Open Index2.html to get started.
-```
+
     
 ## Future Changes
+
 
 I plan on adding a few things in the future:
 
@@ -32,9 +33,11 @@ I plan on adding a few things in the future:
 2. Split the questions into categories.
 
 3. High score saving to compete with friends!
+
+
 ## Authors
 
-Warren Wittcop Jr.
+Warren Wittcop Jr
 
 https://github.com/WarrenWittcop/
 
@@ -52,3 +55,10 @@ For My readme help:
  - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
  - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
+ ...and tons of help from instructors at General Assembly
+
+ Nicole Hamilton, Billie Heidelberg , and Mark Ryan--Thank you all!
+
+
+
