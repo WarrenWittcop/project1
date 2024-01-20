@@ -20,7 +20,9 @@ Located at https://github.com/WarrenWittcop/project1
 
 1. Clone the files down
 
-2. Open Index2.html to get started.
+2. Open Index.html to get started.
+
+Or use the link https://warrenwittcop.github.io/project1/
 
     
 ## Future Changes
