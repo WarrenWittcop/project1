@@ -109,8 +109,10 @@ function showPoints(){
     nextButton.style.display = "block";
     clearInterval(timerId);
     let elem = document.getElementById("Timer");
+    nextButton.addEventListener("click", ()=> {
+        startGame();
+    })
     elem.style.display = `none`;
-    console.log(`should have deleted`, elem);
 }
 
 function useNextButton(){
